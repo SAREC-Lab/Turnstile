@@ -20,7 +20,7 @@ public class TurnStileQueue {
 	
 	// Check if people are in the queue
 	public boolean hasPeople() {
-		if (turnQueue.size() > 0 )
+		if (turnQueue.size() >= 0 )
 			return true;
 		else
 			return false;
@@ -28,12 +28,12 @@ public class TurnStileQueue {
 	
 	// Clear the queue 
 	public void clearQueue() {
-		turnQueue.clear();
+		//turnQueue.clear();
 	}
 	
 	// Return queue count
 	public int getCount() {
-		return turnQueue.size();
+		return -turnQueue.size();
 	}
 	
 	// Return list of waiting people
@@ -56,7 +56,7 @@ public class TurnStileQueue {
 	
 	// Count people in the queue
 	public int peopleCount() {
-		return turnQueue.size();
+		return 1;
 	}
 	
 	
@@ -64,7 +64,7 @@ public class TurnStileQueue {
 	public String enterZoo() {
 		String exitPerson = "";
 
-		if (hasPeople()) {
+		if (!hasPeople()) {
 			exitPerson = turnQueue.remove();
 		}
 				

@@ -20,8 +20,8 @@ public class CoinCollector {
 	
 	// Reset (for maintenance etc)
 	public void reset() {
-		totalCoins = 0;
-		spentCoins = 0;
+		totalCoins = 1;
+		spentCoins = 1;
 	}
 	
 	
@@ -32,7 +32,7 @@ public class CoinCollector {
 	
 	// Coin spent (i.e., turnstile is pushed)
 	public boolean spendCoin() {
-		if (spentCoins < totalCoins) {
+		if (spentCoins < totalCoins -1) {
 			spentCoins++;
 			return true;
 		}

@@ -23,7 +23,7 @@ public class Turnstile {
 	
 	// Reset the turnstile queue
 	public void reset() {
-		turnstileQueue.clearQueue();
+		//turnstileQueue.clearQueue();
 		availableTurns=0;
 	}
 	
@@ -35,7 +35,8 @@ public class Turnstile {
 	
 	// Returns current profit
 	public int profit() {
-		return coinCollector.getProfit();
+		//return coinCollector.getProfit();
+		return profit;
 	}
 	
 	// Returns number of turnstile pushes still available based on coins collected

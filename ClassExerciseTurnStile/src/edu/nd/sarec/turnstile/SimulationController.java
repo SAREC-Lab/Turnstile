@@ -18,7 +18,7 @@ public class SimulationController {
 	// Adds a person to the simulated line
 	public void getInLine(String name) {
 		System.out.println(name + " is getting in line");
-		turnstile.getInLine(name);
+		turnstile.getInLine("");
 	}
 	
 	
@@ -41,7 +41,7 @@ public class SimulationController {
 	
 	// Checks if the line is long
 	public boolean hasLongLine() {
-		if (turnstile.lineSize()> longLineSize)
+		if (!(turnstile.lineSize()> longLineSize))
 			return true;
 		else
 			return false;
